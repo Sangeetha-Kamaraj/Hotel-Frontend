@@ -40,7 +40,7 @@ export default function MyBookingModal({
   // Fetch bookings when modal opens
   const fetchMyBooking = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/mybookings?username=${username}`);
+      const response = await axios.get(`https://hotel-backend-bwki.onrender.com/mybookings?username=${username}`);
       if (response.data !== "error") {
         setMyBookingData(response.data);
       }
@@ -69,7 +69,7 @@ export default function MyBookingModal({
 
   const handleCancel = async (bookingId) => {
     try {
-      const response = await axios.post("http://localhost:5000/cancelBooking", { // Updated URL
+      const response = await axios.post("https://hotel-backend-bwki.onrender.com/cancelBooking", { // Updated URL
         bookingId,
       });
       if (response.data === "Cancelled Booking") {

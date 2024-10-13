@@ -51,7 +51,7 @@ const BookingModal = ({ open, handleClose, selectedHotel = "" }) => {
 
     if (selectedDate && selectedHotel && selectedSeats > 0 && selectedSlot && username) {
         try {
-            const response = await axios.post("http://localhost:5000/createBooking", {
+            const response = await axios.post("https://hotel-backend-bwki.onrender.com/createBooking", {
                 selectedHotel,
                 username,
                 selectedDate,

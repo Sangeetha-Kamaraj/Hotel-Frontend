@@ -43,7 +43,7 @@ const RegistrationModal = ({ handleClose, open, modalType }) => {
     if (modalType === "login") {
       if (formState.username.length && formState.password.length) {
         const response = await axios.post(
-          `http://localhost:5000/login?username=${formState.username}&password=${formState.password}`
+          `https://hotel-backend-bwki.onrender.com/login?username=${formState.username}&password=${formState.password}`
         );
 
         if (response.data !== "error") {
@@ -63,7 +63,7 @@ const RegistrationModal = ({ handleClose, open, modalType }) => {
     } else {
       if (handleValidation()) {
         const response = await axios.post(
-          "http://localhost:5000/registration",
+          "https://hotel-backend-bwki.onrender.com/registration",
           {
             ...formState,
           }

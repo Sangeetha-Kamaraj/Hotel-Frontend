@@ -35,7 +35,7 @@ export default function BookingInformation({ seachedHotel }) {
 
   const fetchHotels = async () => {
     const response = await axios.get(
-      `http://localhost:5000/fetchHotels?location=${location.toLowerCase()}`
+      `https://hotel-backend-bwki.onrender.com/fetchHotels?location=${location.toLowerCase()}`
     );
     console.log(response.data, "response ");
     setapiHotelList(response.data);
